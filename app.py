@@ -88,7 +88,7 @@ def logout():
 
 @app.route('/')
 def hello_world():
-    return render_template("home.html")
+    return render_template("home.html", tree_list=TreeList.objects())
 
 
 @app.route('/addtree', methods=["GET", "POST"])
